@@ -1,8 +1,25 @@
 package raskusur.raskusur.model;
+
+import org.springframework.stereotype.Indexed;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="person")
 public class Person {
 
+    @Id
+    @GeneratedValue
     private int id;
+
+    @Column(name="name")
     private String name;
+
+    @Column(name="balance")
     private Double balance;
 
     public Person() {

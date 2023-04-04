@@ -2,12 +2,30 @@ package raskusur.raskusur.model;
 
 import java.util.ArrayList;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="item")
 public class Item {
     
+    @Id
+    @GeneratedValue
     private int id;
+
+    @Column(name="name")
     private String name;
+
+    @Column(name="value")
     private Double value;
+
+    @Column(name="is_owed")
     private String isOwed; // person who payed
+
+    @Column(name="owes_list")
     private ArrayList<Person> owesList; 
 
     public Item() {

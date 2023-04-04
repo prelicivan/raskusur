@@ -20,13 +20,12 @@ public class LedgerController {
 
     private static LedgerController instance;
 
-    private LinkedList<Person> personListCont;
-    private HashMap personHM = new HashMap<String, Double>();
+    private HashMap personHM;
     private ArrayList<Person> balancePlusList; // owes money
     private ArrayList<Person> balanceMinusList; // is owed money
 
     private LedgerController() {
-        personListCont = new LinkedList<>();
+        personHM = new HashMap<String, Double>();
         balanceMinusList = new ArrayList<>();
         balancePlusList = new ArrayList<>();
     }
